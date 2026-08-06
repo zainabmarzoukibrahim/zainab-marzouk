@@ -38,7 +38,7 @@
 
 <div class="page-wrapper">
 
-  {% unless template == 'gift-guide' %}
+  {% unless template.suffix == 'gift-guide' %}
     <div id="header-group">
       {% sections 'header-group' %}
     </div>
@@ -57,7 +57,7 @@
   </main>
 
 
-  {% unless template == 'gift-guide' %}
+  {% unless template.suffix == 'gift-guide' %}
     <footer>
       {% sections 'footer-group' %}
     </footer>
