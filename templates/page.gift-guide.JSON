@@ -1,0 +1,14 @@
+{
+  "sections": {
+    "banner": {
+      "type": "custom-banner"
+    },
+    "grid": {
+      "type": "custom-grid"
+    }
+  },
+  "order": [
+    "banner",
+    "grid"
+  ]
+}

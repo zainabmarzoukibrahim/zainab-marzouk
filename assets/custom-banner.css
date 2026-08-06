@@ -1,0 +1,44 @@
+.custom-banner{
+    width:100%;
+}
+
+.top-bar{
+    height: 170.67px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top-left,
+.top-center,
+.top-right{
+    flex:1;
+}
+
+.top-center{
+    text-align: center;
+}
+.top-right{
+    display: flex;
+    justify-content: flex-end;
+}
+.banner-container{
+width: 3840px;
+height: 2080px;
+}
+.banner-bottom{
+    display: flex;
+}
+.banner-image{
+    width: 3840px;
+    height: 1065px;
+}
+.banner-side-image{
+    width: 2373.33px;
+}
+.banner-bottom{
+    width: 3840px;
+    height: 89.33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
