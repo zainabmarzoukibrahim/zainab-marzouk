@@ -55,11 +55,9 @@
     {% render 'chat-drawer' %}
 
     <div class="page-wrapper">
-      {% unless template.suffix == 'gift-guide' %}
-  <div id="header-group">
-    {% sections 'header-group' %}
-  </div>
-{% endunless %}
+      <div id="header-group">
+        {% sections 'header-group' %}
+      </div>
 
       <script>
         // Inline header height and menu style calculations to prevent layout shift
@@ -140,11 +138,9 @@
         {{ content_for_layout }}
       </main>
 
-      {% unless template.suffix == 'gift-guide' %}
-  <footer>
-    {% sections 'footer-group' %}
-  </footer>
-{% endunless %}
+      <footer>
+        {% sections 'footer-group' %}
+      </footer>
     </div>
 
     {% render 'cart-drawer', render_wrapper: true %}

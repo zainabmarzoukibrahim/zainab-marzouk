@@ -1,0 +1,24 @@
+{%- render 'meta-tags' -%}
+{%- render 'stylesheets' -%}
+{%- render 'fonts' -%}
+{%- render 'scripts' -%}
+{%- render 'theme-styles-variables' -%}
+{%- render 'color-palette' -%}
+
+{% if request.design_mode %}
+  {%- render 'theme-editor' -%}
+{% endif %}
+
+{{ content_for_header }}
+
+<div class="page-wrapper">
+
+  <main
+    id="MainContent"
+    class="content-for-layout"
+    role="main"
+  >
+    {{ content_for_layout }}
+  </main>
+
+</div>
