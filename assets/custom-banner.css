@@ -105,14 +105,14 @@
     color: #000;
     text-decoration: none;
     font-size: 55px;
-    font-weight: 600;
+    font-weight: 100;
     letter-spacing: 1px;
     text-transform: uppercase;
     transition: all 0.3s ease;
 }
 
 .btn-choose:hover{
-    background: #FFC700;
+    background:#000;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
 }
