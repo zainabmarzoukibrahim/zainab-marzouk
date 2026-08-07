@@ -115,7 +115,7 @@
   
      
 }
-.shop-btn::before{
+.btn-choose::before{
     content:'';
     position:absolute;
     top:0;
