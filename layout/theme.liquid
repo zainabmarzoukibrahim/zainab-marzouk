@@ -1,72 +1,76 @@
 <!doctype html>
-<html
-  {% if request.design_mode %}
-    class="shopify-design-mode"
+<html class="no-js" lang="{{ request.locale.iso_code }}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="">
+  <link rel="canonical" href="{{ canonical_url }}">
+  <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+
+  {%- if settings.favicon != blank -%}
+    <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+  {%- endif -%}
+
+  {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
+    <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+  {%- endunless -%}
+
+  <title>
+    {{ page_title }}
+    {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+    {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+    {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+  </title>
+
+  {% if page_description %}
+    <meta name="description" content="{{ page_description | escape }}">
   {% endif %}
-  lang="{{ request.locale.iso_code }}"
->
-  <head>
-    {%- if settings.favicon != blank -%}
-      <link
-        rel="icon"
-        type="image/png"
-        href="{{ settings.favicon | image_url: width: 32, height: 32 }}"
-      >
-    {%- endif -%}
+
+  {% comment %}
+    Opt into cross-document (MPA) view transitions and hold first paint until #MainContent
+    parses, so the transition runs consistently.
+  {% endcomment %}
+  
+  {% if settings.transition_to_main_product or settings.page_transition_enabled %}
+    {% style %}
+      @media (prefers-reduced-motion: no-preference) {
+        @view-transition {
+          navigation: auto;
+        }
+      }
+    {% endstyle %}
+    <link rel="expect" href="#MainContent" blocking="render" id="view-transition-render-blocker">
+  {% endif %}
+
+  {%- render 'meta-tags' -%}
+  {%- render 'stylesheets' -%}
+  {%- render 'fonts' -%}
+  {%- render 'scripts' -%}
+  {%- render 'theme-styles-variables' -%}
+  {%- render 'color-palette' -%}
+
+  {% if request.design_mode %}
+    {%- render 'theme-editor' -%}
+  {% endif %}
+
+  {{ content_for_header }}
+
+  {% render 'chat-drawer' %}
+</head>
+
+<body class="template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}">
+  
+  <div class="page-wrapper">
 
     {% comment %}
-      Opt into cross-document (MPA) view transitions and hold first paint until #MainContent
-      parses, so the transition runs consistently.
-      Both are gated on the same settings as the view-transitions.js opt-out switch (see snippets/scripts.liquid).
+      ========== HEADER ==========
+      بس للصفحات العادية — مش لـ gift-guide
     {% endcomment %}
-    {% if settings.transition_to_main_product or settings.page_transition_enabled %}
-      {% style %}
-        @media (prefers-reduced-motion: no-preference) {
-          @view-transition {
-            navigation: auto;
-          }
-        }
-      {% endstyle %}
-      <link
-        rel="expect"
-        href="#MainContent"
-        blocking="render"
-        id="view-transition-render-blocker"
-      >
-    {% endif %}
-
-    {%- render 'meta-tags' -%}
-    {%- render 'stylesheets' -%}
-    {%- render 'fonts' -%}
-    {%- render 'scripts' -%}
-    {%- render 'theme-styles-variables' -%}
-    {%- render 'color-palette' -%}
-
-    {% if request.design_mode %}
-      {%- render 'theme-editor' -%}
-    {% endif %}
-
-    {{ content_for_header }}
-  </head>
-
-  <body class="page-width-{{ settings.page_width }} card-hover-effect-{{ settings.card_hover_effect }}">
-    {% render 'skip-to-content-link', href: '#MainContent', text: 'accessibility.skip_to_text' %}
-
-    {% render 'chat-drawer' %}
-
-    <div class="page-wrapper">
-      <div id="header-group">
-        {% sections 'header-group' %}
-      </div>
-
+    {% unless template.suffix == 'gift-guide' %}
+      
       <script>
-        // Inline header height and menu style calculations to prevent layout shift
-        // Note: Updates in calculateHeaderGroupHeight(), updateTransparentHeaderOffset() and setHeaderMenuStyle() utilities.js should be kept in sync with this function
         (function setHeaderHeighCustomProperties() {
-          /*
-           * Header calculation functions for maintaining CSS variables
-           * Mimic calculateHeaderGroupHeight() in utilities.js
-           */
           const header = document.querySelector('header-component');
           const headerGroup = document.querySelector('#header-group');
           const hasHeaderSection = headerGroup?.querySelector('.header-section');
@@ -76,7 +80,6 @@
           const headerTopRow = header.querySelector('.header__row--top');
           const headerHeight = header.offsetHeight;
 
-          // Calculate the total height of the header group
           let headerGroupHeight = 0;
           const children = headerGroup.children;
           for (let i = 0; i < children.length; i++) {
@@ -85,12 +88,10 @@
             headerGroupHeight += element.offsetHeight;
           }
 
-          // Check for transparent header special case
           if (header.hasAttribute('transparent') && header.parentElement?.nextElementSibling) {
             headerGroupHeight += headerHeight;
           }
 
-          // Set CSS variables
           document.body.style.setProperty('--header-height', `${headerHeight}px`);
           document.body.style.setProperty('--header-group-height', `${headerGroupHeight}px`);
 
@@ -100,18 +101,12 @@
             });
           }
 
-          /**
-           * Updates CSS custom properties for transparent header offset calculation
-           * Mimic updateTransparentHeaderOffset() in utilities.js
-           */
-
           if (!hasHeaderSection || !header?.hasAttribute('transparent')) {
             document.body.style.setProperty('--transparent-header-offset-boolean', '0');
             return;
           }
 
           const hasImmediateSection = hasHeaderSection.nextElementSibling?.classList.contains('shopify-section');
-
           const shouldApplyOffset = !hasImmediateSection ? '1' : '0';
           document.body.style.setProperty('--transparent-header-offset-boolean', shouldApplyOffset);
         })();
@@ -127,29 +122,45 @@
         })();
       </script>
 
-      <main
-        id="MainContent"
-        class="content-for-layout"
-        role="main"
-        data-page-transition-enabled="{{ settings.page_transition_enabled }}"
-        data-product-transition="{{ settings.transition_to_main_product }}"
-        data-template="{{ template }}"
-      >
-        {{ content_for_layout }}
-      </main>
+      {% sections 'header-group' %}
+      
+    {% endunless %}
 
-      <footer>
-        {% sections 'footer-group' %}
-      </footer>
-    </div>
 
-    {% render 'cart-drawer', render_wrapper: true %}
-    {% render 'theme-drawer' %}
+    {% comment %}
+      ========== MAIN CONTENT ==========
+      ده يظهر في EVERY PAGE حتى gift-guide
+    {% endcomment %}
+    <main
+      id="MainContent"
+      class="content-for-layout"
+      role="main"
+      data-page-transition-enabled="{{ settings.page_transition_enabled }}"
+      data-product-transition="{{ settings.transition_to_main_product }}"
+      data-template="{{ template }}"
+    >
+      {{ content_for_layout }}
+    </main>
 
-    {% render 'search-modal' %}
 
-    {% if settings.quick_add or settings.mobile_quick_add %}
-      {% render 'quick-add-modal' %}
-    {% endif %}
-  </body>
+    {% comment %}
+      ========== FOOTER & DRAWERS ==========
+      بس للصفحات العادية — مش لـ gift-guide
+    {% endcomment %}
+    {% unless template.suffix == 'gift-guide' %}
+      
+      {% render 'cart-drawer', render_wrapper: true %}
+      {% render 'theme-drawer' %}
+      {% render 'search-modal' %}
+
+      {% if settings.quick_add or settings.mobile_quick_add %}
+        {% render 'quick-add-modal' %}
+      {% endif %}
+      
+      {% sections 'footer-group' %}
+      
+    {% endunless %}
+
+  </div>
+</body>
 </html>
