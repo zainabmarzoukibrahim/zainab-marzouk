@@ -132,7 +132,7 @@
 .btn-choose:hover{
    color: white;
 }
-.btn-choose::before{
+.btn-choose:hover::before{
     transform:scale(1);
 }
 .btn-choose:active::before{
