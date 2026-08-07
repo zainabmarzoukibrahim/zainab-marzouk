@@ -133,6 +133,8 @@
     transition: all 0.3s ease;
     position:relative;
     overflow:hidden;
+    z-index:1;
+    transition:color 0.4 ease;
 
 }
 .shop-btn::before{
