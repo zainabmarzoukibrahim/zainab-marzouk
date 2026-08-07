@@ -4,6 +4,7 @@
 
 .top-bar{
     height: 170.67px;
+    max-width:3840
     display:flex;
     justify-content: space-between;
     align-items: center;
