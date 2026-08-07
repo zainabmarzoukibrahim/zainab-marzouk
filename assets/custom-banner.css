@@ -101,7 +101,7 @@
     align-items: center;
     gap: 6px;
     padding:8px 100px;
-    background: #ffd90083;
+    background: #FFFFE0;
     color: #000;
     text-decoration: none;
     font-size: 55px;
@@ -112,6 +112,7 @@
 }
 
 .btn-choose:hover{
+
     background:#000;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
