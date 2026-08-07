@@ -109,6 +109,241 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     transition: all 0.3s ease;
+    position:relative;
+    overflow:hidden;
+    z-index:1;
+  
+     
+}
+.shop-btn::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:black;
+    transform:scalex(0);
+    transform-origin:left;
+    transition:transform 0.3s ease;
+    z-index:-1;
+}
+
+.btn-choose:hover{
+   color: white;
+}
+.btn-choose::before{
+    transform:scale(1);
+}
+.btn-choose:active::before{
+    transform:scale(1);
+}
+
+
+.shop-btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 50px 150px;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    position:relative;
+    overflow:hidden;
+    z-index:1;
+    transition:color 0.4 ease;
+
+}
+.shop-btn::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#FFD700;
+    transform:scalex(0);
+    transform-origin:left;
+    transition:transform 0.3s ease;
+    z-index:-1;
+}
+
+.shop-btn:hover{
+   color: #000;
+}
+.shop-btn:hover::before{
+    transform:scale(1);
+}
+.shop-btn:active::before{
+    transform:scale(1);
+}
+
+
+.banner-footer{
+    text-align: center;
+    margin-top: 0;
+    padding:30px 10px;
+    font-size: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #000;
+    background-color:#f5f5f5;
+}
+
+/* ============================================
+   Mobile Responsive
+   ============================================ */
+@media (max-width: 768px){
+    .top-bar{
+        height: auto;
+        flex-direction: column;
+        gap: 12px;
+        padding: 20px 0;
+    }
+    
+    .top-left,
+    .top-center,
+    .top-right{
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .banner-image{
+        height: 300px;
+    }
+    
+    .banner-bottom{
+        flex-direction: column;
+        padding: 24px;
+    }
+    
+    .banner-text h1{
+        font-size: 32px;
+    }
+    
+    .banner-side-image{
+        width: 100%;
+        max-width: 100%;
+        height: 300px;
+    }
+}
+/*.custom-banner{
+    width:100%;
+    background-color:#ffffff;
+}
+
+.top-bar{
+    height: 170.67px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#f5f5f5;
+    padding: 0 40px;
+    margin:0 auto;
+}
+
+.top-left,
+.top-center,
+.top-right{
+    flex:1;
+}
+
+.top-center{
+    text-align: center;
+    
+}
+
+.top-center p {
+    margin: 0;
+   font-size: 55px;
+}
+
+.top-right{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.banner-container{
+    width: 100%;
+    max-width: 3840px;
+    margin: 0 auto;
+}
+
+.banner-image{
+    width: 100%;
+    height: 1065px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.banner-bottom{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+    gap: 20px;
+    box-sizing:border-box;
+}
+
+.banner-text{
+    flex: 1 1 auto;
+    max-width: none;
+    margin-left:0;
+}
+
+.banner-text h1{
+    
+    font-size: 200px;
+    font-weight: 700;
+    margin: 0 0 20px;
+    line-height: 1.1;
+}
+
+.banner-text p{
+    font-size:80px;
+    line-height: 1.6;
+    color: #333;
+    margin: 0 0 30px;
+}
+
+.banner-side-image{
+    width: 2373.33px;
+    max-width: 50%;
+    height: 1072px;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+.banner-logo{
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.btn-choose{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding:8px 100px;
+    background: #FFF176;
+    color: #000000ff;
+    text-decoration: none;
+    font-size: 55px;
+    font-weight:80;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+     
 }
 
 .btn-choose:hover{
@@ -173,9 +408,7 @@
     background-color:#f5f5f5;
 }
 
-/* ============================================
-   Mobile Responsive
-   ============================================ */
+
 @media (max-width: 768px){
     .top-bar{
         height: auto;
@@ -210,3 +443,4 @@
         height: 300px;
     }
 }
+*/
