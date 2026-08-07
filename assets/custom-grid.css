@@ -51,12 +51,12 @@
 }
 .grid-popup-btn--1{
   
-  top:30%;
+  top:80%;
   left:50%;
 }
 .grid-popup-btn--1{
-  bottom:100px;
-  right:20px;
+  top:30%;
+  left:80%;
 }
 .grid-popup-btn--2{
   bottom:100px;
