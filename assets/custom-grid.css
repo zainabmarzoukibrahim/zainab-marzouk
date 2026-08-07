@@ -13,10 +13,10 @@
   
 }
 .grid-tagline{
-  height: 100px;
+  height: 344px;
     display:flex;
     justify-content: space-between;
-    
+    align-items: center;
     padding: 0 40px;
     margin:0 auto;
     width:100px;
