@@ -1,5 +1,6 @@
 {{ 'custom-grid.css' | asset_url | stylesheet_tag }}
 <section class="custom-grid">
+  <p class="grid-tagline">Tisso vison in the wild</p>
     <div class="grid-container">
      {% for block in section.blocks %}
         {% assign  product = block.settings.product %}
