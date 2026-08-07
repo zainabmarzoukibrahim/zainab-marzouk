@@ -52,14 +52,16 @@
     height: auto;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 40px;
+    justify-content: space-between;
+    padding: 600pxpx;
     gap: 40px;
+    box-sizing:border-box;
 }
 
 .banner-text{
     flex: 1;
     max-width: 600px;
+    margin-left:0;
 }
 
 .banner-text h1{
