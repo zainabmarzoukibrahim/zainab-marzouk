@@ -130,7 +130,7 @@
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
-    transition: all 4s ease;
+    transition: all 10s ease;
 }
 
 .shop-btn:hover{
