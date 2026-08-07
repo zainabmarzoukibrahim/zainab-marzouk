@@ -13,6 +13,7 @@
       "type": "custom-banner",
       "settings": {
         "background_image": "shopify://shop_images/Frame.png",
+        "side_image": "shopify://shop_images/Frame_206d5027-9106-4e56-b126-203acb7d1666.png",
         "logo_text": "TISSO VISON",
         "top_text": "Find the ideal gift for your loved ones.",
         "top_button_text": "CHOOSE GIFT",
