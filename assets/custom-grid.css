@@ -26,12 +26,9 @@
   width: 3840px;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
+
 }
 
-.grid-item:hover .grid-image {
-  transform: scale(1.05);
-}
 
 
 .grid-popup-btn {
@@ -50,14 +47,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
-  z-index: 2;
+ 
+}
+.grid-popup-btn--1{
+  bottom:100px;
+  right:20px;
 }
 
-.grid-popup-btn:hover {
-  transform: scale(1.1);
-  background: #005A9E;
-}
 
 /* ========== POPUP ========== */
 .product-popup {
