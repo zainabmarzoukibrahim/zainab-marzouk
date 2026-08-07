@@ -152,7 +152,7 @@
 }
 
 .shop-btn:hover{
-   color:black;
+   color: #000;
 }
 .shop-btn:hover::before{
     transform:scale(1);
@@ -169,7 +169,7 @@
     font-size: 30px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: black;
+    color: #000;
     background-color:#f5f5f5;
 }
 
