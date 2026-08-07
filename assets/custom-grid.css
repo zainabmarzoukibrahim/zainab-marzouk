@@ -1,0 +1,48 @@
+.custom-grid{
+    padding:40px 20px;
+    max-width:1200px;
+    margin:0 auto;
+}
+
+.grid-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+
+}
+
+.grid-item{
+    position:relative;
+}
+.grid-image-wrapper{
+    position:relative;
+    aspect-ratio:1;
+
+}
+.grid-image{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+   
+}
+
+.grid-popup-btn{
+    position:absolute;
+    height:15.7px;
+    width:15.7px;
+    right:16px;
+    bottom:16px;
+    border-radius:50%;
+    background:white;
+    color:#000;
+    border:none;
+    font-size:20px;
+    font-weight:700;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    
+
+
+}
