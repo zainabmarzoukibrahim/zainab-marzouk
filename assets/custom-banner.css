@@ -21,6 +21,7 @@
 
 .top-center{
     text-align: center;
+    font-size:100 px;
 }
 
 .top-center p {
@@ -89,7 +90,7 @@
 }
 
 .banner-logo{
-    font-size: 100px;
+    font-size: 35px;
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
