@@ -65,6 +65,7 @@
 }
 
 .banner-text h1{
+    text-align:center;
     font-size: 200px;
     font-weight: 700;
     margin: 0 0 20px;
