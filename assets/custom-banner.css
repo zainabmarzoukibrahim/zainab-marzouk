@@ -60,12 +60,12 @@
 
 .banner-text{
     flex: 1 1 auto;
-    max-width: 1080px;
-    margin-left:1466;
+    max-width: none;
+    margin-left:0;
 }
 
 .banner-text h1{
-    font-size: 80px;
+    font-size: 200px;
     font-weight: 700;
     margin: 0 0 20px;
     line-height: 1.1;
