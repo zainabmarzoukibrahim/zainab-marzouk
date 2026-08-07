@@ -108,7 +108,7 @@
     font-weight:80;
     letter-spacing: 1px;
     text-transform: uppercase;
-    transition: all 10s ease;
+    transition: all 3s ease;
 }
 
 .btn-choose:hover{
