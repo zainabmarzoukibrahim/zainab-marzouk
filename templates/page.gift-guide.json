@@ -7,7 +7,6 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-
 {
   "sections": {
     "banner": {
@@ -24,14 +23,62 @@
         "button_text": "SHOP NOW",
         "button_link": "",
         "footer_text": "SUSTAINABLE, ETHICALLY-MADE CLOTHES IN SIZES XS TO 6XL"
-      }},
-    "grid": {
+      }
+    },
+    "custom_grid_BAkyen": {
       "type": "custom-grid",
+      "blocks": {
+        "product_C93hgz": {
+          "type": "product",
+          "settings": {
+            "product": "black-leather-bag"
+          }
+        },
+        "product_fVHEzH": {
+          "type": "product",
+          "settings": {
+            "product": "blue-silk-tuxedo"
+          }
+        },
+        "product_eUg97y": {
+          "type": "product",
+          "settings": {
+            "product": "chequered-red-shirt"
+          }
+        },
+        "product_P9XYdD": {
+          "type": "product",
+          "settings": {
+            "product": "classic-leather-jacket"
+          }
+        },
+        "product_WXWRzJ": {
+          "type": "product",
+          "settings": {
+            "product": "classic-varsity-top"
+          }
+        },
+        "product_pkrNyR": {
+          "type": "product",
+          "settings": {
+            "product": "dark-denim-top"
+          }
+        }
+      },
+      "block_order": [
+        "product_C93hgz",
+        "product_fVHEzH",
+        "product_eUg97y",
+        "product_P9XYdD",
+        "product_WXWRzJ",
+        "product_pkrNyR"
+      ],
+      "name": "Gift Guide Grid",
       "settings": {}
     }
   },
   "order": [
-    "banner","grid"
+    "banner",
+    "custom_grid_BAkyen"
   ]
-  }
-
+}
