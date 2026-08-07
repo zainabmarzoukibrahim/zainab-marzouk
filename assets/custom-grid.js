@@ -1,4 +1,5 @@
 
+
 (function() {
   'use strict';
 
@@ -8,28 +9,26 @@
   let currentProduct = null;
   let currentVariant = null;
 
- 
-  function setupPopupStructure() {
-   
+  
+  function preparePopup() {
+  
     if (document.querySelector('.product-popup')) return;
 
     const popupClose = document.querySelector('.popup-close');
     const popupContent = document.querySelector('.popup-content');
 
-    if (!popupContent) return;
+    if (!popupContent) {
+      console.error('Popup content not found!');
+      return;
+    }
 
-    
+   
     const wrapper = document.createElement('div');
     wrapper.className = 'product-popup';
 
-   
+    
     const overlay = document.createElement('div');
     overlay.className = 'popup-overlay';
-
-   
-    wrapper.appendChild(overlay);
-    if (popupClose) wrapper.appendChild(popupClose);
-    wrapper.appendChild(popupContent);
 
     
     const imgWrapper = popupContent.querySelector('.popup-image-wrapper');
@@ -41,10 +40,24 @@
       imgWrapper.appendChild(img);
     }
 
+    
+    if (popupClose && popupClose.parentNode) {
+      popupClose.parentNode.removeChild(popupClose);
+    }
+    if (popupContent && popupContent.parentNode) {
+      popupContent.parentNode.removeChild(popupContent);
+    }
+
+    
+    wrapper.appendChild(overlay);
+    wrapper.appendChild(popupClose);
+    wrapper.appendChild(popupContent);
+
+    
     document.body.appendChild(wrapper);
   }
 
-  
+ 
   function formatPrice(cents) {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
@@ -58,6 +71,8 @@
 
     const selected = [];
     const variantsBox = document.getElementById('popupVariants');
+
+    if (!variantsBox) return null;
 
     const activeColor = variantsBox.querySelector('.color-btn.is-active');
     if (activeColor) selected.push(activeColor.dataset.value);
@@ -76,9 +91,9 @@
     return AUTO_ADD_OPTIONS.every(o => opts.includes(o));
   }
 
- 
+
   function openPopup(handle) {
-    setupPopupStructure();
+    preparePopup();
 
     currentProduct = null;
     currentVariant = null;
@@ -87,32 +102,41 @@
     const errorMsg = document.getElementById('popupError');
     const addBtn = document.getElementById('popupAddBtn');
 
+    if (!popup) {
+      console.error('Popup wrapper not found!');
+      return;
+    }
+
     if (errorMsg) {
       errorMsg.style.display = 'none';
       errorMsg.classList.remove('is-visible');
     }
+
     if (addBtn) {
-      addBtn.textContent = 'ADD TO CART';
-      addBtn.innerHTML = '<span>ADD TO CART</span><span class="popup-arrow">→</span>';
-      addBtn.classList.remove('is-loading');
       addBtn.disabled = true;
       addBtn.style.opacity = '0.5';
+      addBtn.innerHTML = '<span>ADD TO CART</span><span class="popup-arrow">→</span>';
+      addBtn.classList.remove('is-loading');
     }
 
     popup.classList.add('is-open');
     document.body.classList.add('popup-open');
 
     fetch(`/products/${handle}.js`)
-      .then(r => r.json())
+      .then(r => {
+        if (!r.ok) throw new Error('Product not found');
+        return r.json();
+      })
       .then(product => {
         currentProduct = product;
         renderPopup(product);
       })
       .catch(err => {
-        console.error(err);
+        console.error('Error:', err);
         if (errorMsg) {
           errorMsg.textContent = 'Failed to load product.';
           errorMsg.style.display = 'block';
+          errorMsg.classList.add('is-visible');
         }
       });
   }
@@ -125,13 +149,14 @@
     }
   }
 
-  
+
   function renderPopup(product) {
     const popupImg = document.getElementById('popupImg');
     const popupTitle = document.getElementById('popupTitle');
     const popupPrice = document.getElementById('popupPrice');
     const popupDesc = document.getElementById('popupDesc');
     const variantsBox = document.getElementById('popupVariants');
+    const addBtn = document.getElementById('popupAddBtn');
 
     if (popupImg) {
       popupImg.src = product.featured_image;
@@ -216,7 +241,7 @@
     }
   }
 
-  
+ 
   function addToCart() {
     if (!currentVariant) return;
 
@@ -286,21 +311,26 @@
 
  
   function init() {
-    setupPopupStructure();
+    preparePopup();
 
-   
+    // (+) على الصور
     document.querySelectorAll('.grid-popup-btn').forEach(btn => {
       btn.addEventListener('click', function(e) {
         e.preventDefault();
+        e.stopPropagation();
         const handle = this.dataset.productHandle;
         if (handle) openPopup(handle);
       });
     });
 
+  
     document.addEventListener('click', function(e) {
       if (e.target.classList.contains('popup-close') || e.target.classList.contains('popup-overlay')) {
         closePopup();
       }
+    });
+
+    document.addEventListener('click', function(e) {
       if (e.target.closest('#popupAddBtn')) {
         addToCart();
       }
