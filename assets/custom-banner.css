@@ -152,7 +152,7 @@
 }
 
 .shop-btn:hover{
-   color:#fff;
+   color:black;
 }
 .shop-btn:hover::before{
     transform:scale(1);
