@@ -1,0 +1,97 @@
+{{ 'custom-grid.css' | asset_url | stylesheet_tag }}
+<section class="custom-grid">
+    <div class="grid-container">
+     {% for block in section.blocks %}
+        {% assign  product = block.settings.product %}
+        {% if product != blank  %}
+            <div class="grid-item" {{ block.shopify_attributes }}>
+                <div class="grid-image-wrapper">
+                    <img
+                        src="{{ product.featured_image | image_url: width: 919 }}"
+                        alt="{{ product.title | escape }}"
+                        class="grid-image"
+                        loading="lazy"
+                          width:"919"
+                        height:"943"
+                     >
+                 
+
+                        <button
+                        type="button"
+                        class="grid-popup-btn"
+                        data-product-handle="{{ product.handle }}"  >
+                        <span> + </span>
+                    </button>
+                </div>
+     </div>
+    
+    {% endif %}
+{% endfor %}
+</div>
+
+
+</section>
+
+<div class="product-popup" id="productpopup">
+    <div class="popup-overdelay"></div>
+    <div class="pop-content"></div>
+    <button type="button" class="popup-close" aria-label="close">x</button>
+    <div class="popup-body">
+        <div class="popup-image-box">
+            <img src="{{product.featured-image | image_url:width:311}}"
+                alt="{{ product.title |escape }}" 
+                class="popup-img" id="popupimg"
+            loading="lazy"
+        width="311"
+    height="447">
+        </div>
+        <div class="popup-info">
+            <h2 class="popup-title"id="popuptitle"></h2>
+            <p class="popup-price" id="popupprice"></p>
+            <div class="popup-discription" id="popupdiscription"></div>
+            <div class="popup-color&size" id="popupcolor&size"></div>
+            <button class="popup-add-btn" id="popupaddbtn">ADD TO CART</button>
+        </div>
+    </div>
+</div>
+
+<script src="{{ 'customer-grid.js | asset_url' }}" defer></script>
+{% schema %}
+{
+    "name":"Gift Guide Grid",
+    "tag": "section",
+    "class": "section",
+    "max_blocks":6,
+    "blocks":
+    [
+        {
+            "type":"product",
+            "name": "product",
+            "settings":[
+                {
+                    "type":"product",
+                    "id":"product",
+                    "label":"select product"
+
+                }
+            ]
+
+        }
+    ],
+    "presets":[
+        {
+            "name":"Gift Guide Grid",
+            "blocks":{
+                "product-1":{"type":"product"},
+                "product-2":{"type":"product"},
+                "product-3":{"type":"product"},
+                "product-4":{"type":"product"},
+                "product-5":{"type":"product"},
+                "product-6":{"type":"product"}
+                
+            }
+        }
+    ]
+} 
+{% endschema %}
+        
