@@ -112,6 +112,7 @@
 }
 
 .btn-choose:hover{
+    color:#000;
 
     background:#000;
     transform: translateY(-2px);
