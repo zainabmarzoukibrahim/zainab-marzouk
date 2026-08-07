@@ -58,40 +58,57 @@
 <script src="{{ 'customer-grid.js | asset_url' }}" defer></script>
 {% schema %}
 {
-    "name":"Gift Guide Grid",
-    "tag": "section",
-    "class": "section",
-    "max_blocks":6,
-    "blocks":
-    [
-        {
-            "type":"product",
-            "name": "product",
-            "settings":[
-                {
-                    "type":"product",
-                    "id":"product",
-                    "label":"select product"
+  "name": "Gift Guide Grid",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 6,
 
-                }
-            ]
-
-        }
-    ],
-    "presets":[
+  "blocks": [
+    {
+      "type": "product",
+      "name": "product",
+      "settings": [
         {
-            "name":"Gift Guide Grid",
-            "blocks":{
-                "product-1":{"type":"product"},
-                "product-2":{"type":"product"},
-                "product-3":{"type":"product"},
-                "product-4":{"type":"product"},
-                "product-5":{"type":"product"},
-                "product-6":{"type":"product"}
-                
-            }
+          "type": "product",
+          "id": "product",
+          "label": "Select product"
         }
-    ]
-} 
+      ]
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Gift Guide Grid",
+      "blocks": {
+        "product-1": {
+          "type": "product"
+        },
+        "product-2": {
+          "type": "product"
+        },
+        "product-3": {
+          "type": "product"
+        },
+        "product-4": {
+          "type": "product"
+        },
+        "product-5": {
+          "type": "product"
+        },
+        "product-6": {
+          "type": "product"
+        }
+      },
+      "block_order": [
+        "product-1",
+        "product-2",
+        "product-3",
+        "product-4",
+        "product-5",
+        "product-6"
+      ]
+    }
+  ]
+}
 {% endschema %}
-        
