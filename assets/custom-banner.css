@@ -100,11 +100,11 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    padding:10px 20px;
-    background: #ffd9008d;
+    padding:10px 32px;
+    background: #ffd90083;
     color: #000;
     text-decoration: none;
-    font-size: 50px;
+    font-size: 55px;
     font-weight: 100;
     letter-spacing: 1px;
     text-transform: uppercase;
