@@ -33,16 +33,16 @@
   transform: scale(1.05);
 }
 
-/* ========== زرار الدائرة الأزرق ========== */
+
 .grid-popup-btn {
   position: absolute;
-  bottom: 16px;
+  bottom: 40px;
   right: 16px;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: #0078D4;
-  color: #fff;
+  background: gray;
+  color:#000;
   border: none;
   font-size: 24px;
   font-weight: 700;
