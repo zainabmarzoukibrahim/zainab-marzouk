@@ -4,7 +4,7 @@
      {% for block in section.blocks %}
         {% assign  product = block.settings.product %}
         {% if product != blank  %}
-            <div class="grid-item" {{ block.shopify_attributes }}>
+            <div class="grid-item grid-item--{{ forloop.index }}" {{ block.shopify_attributes }}>
                 <div class="grid-image-wrapper">
                     <img
                         src="{{ product.featured_image | image_url: width: 919 }}"
@@ -18,8 +18,9 @@
 
                         <button
                         type="button"
-                        class="grid-popup-btn"
-                        data-product-handle="{{ product.handle }}"  >
+                        class="grid-popup-btn grid-popup-btn--{{ forloop.index }}"
+                        data-product-handle="{{ product.handle }}" 
+                    aria-label="view{{ product.title | escape }}" >
                         <span> + </span>
                     </button>
                 </div>
