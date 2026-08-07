@@ -53,7 +53,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 600pxpx;
+    padding: 600px;
     gap: 20px;
     box-sizing:border-box;
 }
@@ -65,7 +65,7 @@
 }
 
 .banner-text h1{
-    text-align:center;
+    margin-left:50px;
     font-size: 200px;
     font-weight: 700;
     margin: 0 0 20px;
