@@ -62,7 +62,7 @@
 
 .banner-text{
     flex: 1 1 auto;
-    max-width: none;
+    max-width: 1840px;
     margin-left:0;
 }
 
