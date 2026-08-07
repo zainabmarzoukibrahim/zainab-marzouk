@@ -33,30 +33,69 @@
 
 </section>
 
-<div class="product-popup" id="productpopup">
-    <div class="popup-overdelay"></div>
-    <div class="pop-content"></div>
-    <button type="button" class="popup-close" aria-label="close">x</button>
-    <div class="popup-body">
-        <div class="popup-image-box">
-            <img src="{{product.featured-image | image_url:width:311}}"
-                alt="{{ product.title |escape }}" 
-                class="popup-img" id="popupimg"
-            loading="lazy"
-        width="311"
-    height="447">
+<div id="productPopup" class="product-popup">
+  <div class="popup-overlay"></div>
+
+  <div class="popup-modal">
+
+    <button
+      type="button"
+      class="popup-close"
+      aria-label="Close popup">x
+    </button>
+
+    <div class="popup-content">
+
+      <div class="popup-top">
+
+        <div class="popup-image-wrapper">
+      
+<img
+  id="popupImg"
+  src=""
+  alt=""
+  width="600"
+  height="600"
+  loading="lazy">
+
+
         </div>
+
         <div class="popup-info">
-            <h2 class="popup-title"id="popuptitle"></h2>
-            <p class="popup-price" id="popupprice"></p>
-            <div class="popup-discription" id="popupdiscription"></div>
-            <div class="popup-color&size" id="popupcolor&size"></div>
-            <button class="popup-add-btn" id="popupaddbtn">ADD TO CART</button>
+
+          <h2 id="popupTitle"></h2>
+
+          <div id="popupPrice" class="popup-price"></div>
+
+          <div id="popupDesc" class="popup-description"></div>
+
         </div>
+
+      </div>
+
+      <div id="popupVariants" class="popup-variants"></div>
+
+      <div
+        id="popupError"
+        class="popup-error"
+        style="display:none;">
+      </div>
+
+      <button
+        type="button"
+        id="popupAddBtn"
+        class="popup-add-btn"
+        disabled>
+        <span>ADD TO CART</span>
+        <span class="popup-arrow">→</span>
+      </button>
+
     </div>
+  </div>
 </div>
 
 <script src="{{ 'customer-grid.js | asset_url' }}" defer></script>
+
 {% schema %}
 {
   "name": "Gift Guide Grid",
