@@ -13,14 +13,14 @@
   
 }
 .grid-tagline{
-  font-size:80px;
-  color:black;
-  margin:0;
-  padding:30px;
-  text-align:left;
-  letter-spacing:0.5px;
- width:372px;
- 
+  height: 170.67px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#f5f5f5;
+    padding: 0 40px;
+    margin:0 auto;
+    width:3840px;
 
 }
 .grid-item {
