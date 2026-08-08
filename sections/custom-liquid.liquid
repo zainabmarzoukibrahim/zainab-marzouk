@@ -13,6 +13,7 @@
       <span class="banner-logo">{{ section.settings.logo_text }}</span>
     </div>
     <div class="top-center">
+      <div class="banner-logo mobile-only">{{ section.settings.logo_text }}</div>
       <p>{{ section.settings.top_text }}</p>
     </div>
     <div class="top-right">
@@ -31,6 +32,10 @@
         style="background-image: url('{{ section.settings.background_image | image_url: width: 1920 }}');"
       {% endif %}
     ></div>
+    <div class="mobile-banner-header mobile-only">
+      <h1>{{ section.settings.title }}</h1>
+      <p>{{ section.settings.description }}</p>
+    </div>
 
     <!-- Bottom Content -->
     <div class="banner-bottom">
@@ -41,6 +46,10 @@
           {{ section.settings.button_text }} →
         </a>
       </div>
+      <div class="mobile-only mobile-wrapper">
+        <a href="{{ "section.settings.button-link" }} "class="shop-byn">
+          {{ section.settings.button_text }}-></a>
+          <p class="mobile-footer-text">{{ section.settings.footer_text }}</p></div>
       <div class="banner-side-image"
         {% if section.settings.side_image != blank %}
           style="background-image: url('{{ section.settings.side_image | image_url: width: 800 }}');"
