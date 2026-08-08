@@ -576,3 +576,17 @@
 body.popup-open {
   overflow: hidden;
 }
+
+.popup-image-wrapper {
+  width: 120px !important;
+  max-width: 120px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.popup-image-wrapper .popup-img {
+  width: 120px !important;
+  height: 140px !important;
+  object-fit: cover !important;
+  display: block !important;
+}
