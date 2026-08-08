@@ -170,7 +170,7 @@
 
 .popup-image-box {
   width: 100%;
-
+align-self:flex-start;
   aspect-ratio: 0.78;
 
   overflow: hidden;
