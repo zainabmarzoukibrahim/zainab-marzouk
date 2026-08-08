@@ -226,8 +226,22 @@ cursor:pointer;}
        position:relative;
     }
     
-    .top-left,
-    .top-center,
+    .top-left{
+        display:flex;
+        align-items:center;
+        gap:12px;
+    }
+    .top-center{
+        position:absolute;
+        left:50%;
+        top:50%;
+        transform:translate(-50%,-50%);
+        text-align:center;
+        flex:none;
+    }
+    .top-center .banner-logo{
+        font-size:22;
+    }
     .top-right{
         text-align: center;
         justify-content: center;
