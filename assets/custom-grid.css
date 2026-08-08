@@ -193,7 +193,7 @@
   padding: 0 ;
 }
 
-.popup-image-wrapper, .popup-img {
+.popup-image-wrapper .popup-img {
   width: 200px;
   height: 200px ;
 
