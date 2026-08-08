@@ -277,7 +277,7 @@
 }
 
 .color-btn.is-active {
-  background-color: inset 0 0 0 3px #111;
+  background-color: #000;
 }
 
 /* Size / other select */
