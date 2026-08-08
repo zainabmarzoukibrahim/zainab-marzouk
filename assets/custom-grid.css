@@ -134,7 +134,7 @@
 .product-popup-close {
   position: absolute;
   top: 14px;
-  right: 18px;
+  left: 40px;
 
   width: 66px;
   height: 24px;
