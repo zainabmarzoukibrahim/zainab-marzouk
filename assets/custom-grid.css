@@ -117,7 +117,7 @@
  display:flex;
  align-items:flex-start;
  gap:40px;
- padding:40px;
+ padding:40px
  
 
   background: #fff;
@@ -142,7 +142,7 @@
 
   font-size: 28px;
   font-weight: 300;
- 
+  line-height: 1;
 
   color: #000;
 
@@ -166,15 +166,20 @@
 .product-popup-image-box {
 
   width: 50%;
-  flex-shrink:0;
+  height:100px;
+
+  aspect-ratio: 0.78;
+
+  overflow: hidden;
 }
 
-.product-popup-img {
+.popup-img {
   width: 100%;
-  height: auto;
+  height: 100%;
 
   display: block;
 
+  object-fit: cover;
 }
 
 /* Product information */
