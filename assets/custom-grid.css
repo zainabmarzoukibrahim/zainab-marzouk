@@ -590,3 +590,9 @@ body.popup-open {
   object-fit: cover !important;
   display: block !important;
 }
+.popup-body {
+  display: grid !important;
+  grid-template-columns: 120px 1fr !important;
+  column-gap: 20px !important;
+  align-items: start !important;
+}
