@@ -189,12 +189,12 @@
 
 /* ========== IMAGE ========== */
 
-.product-popup-image-box {
+.popup-image-box {
  
   flex-shrink: 0;
 }
 
-.product-popup-img {
+.popup-img {
   display: block;
 
   width: 120px;
