@@ -575,3 +575,25 @@
 body.popup-open {
   overflow: hidden;
 }
+.popup-body {
+  display: grid !important;
+  grid-template-columns: 120px 1fr !important;
+  column-gap: 15px !important;
+  align-items: start !important;
+  width: 100% !important;
+}
+
+.product-popup-image-box {
+  width: 120px !important;
+  min-width: 120px !important;
+  flex-shrink: 0 !important;
+  margin: 0 !important;
+}
+
+.popup-img {
+  display: block !important;
+  width: 120px !important;
+  height: 140px !important;
+  object-fit: cover !important;
+  margin: 0 !important;
+}
