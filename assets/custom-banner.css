@@ -212,7 +212,7 @@
   .top-center > p,
   .top-right,
   .banner-footer  {
-    display: none !important;
+    display: none ;
   }
 
   /* -----  Menu ----- */
