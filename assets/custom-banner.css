@@ -215,7 +215,7 @@
     display: none !important;
   }
 
-  /* ----- Hamburger Menu ----- */
+  /* -----  Menu ----- */
   .mobile-menu-btn {
     display: flex;
     flex-direction: column;
@@ -303,7 +303,7 @@
     background: #000;
     color: #fff;
     text-decoration: none;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     text-transform: uppercase;
   }
 
