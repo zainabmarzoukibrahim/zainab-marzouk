@@ -97,10 +97,7 @@
   align-items: center;
   justify-content: center;
 
-  opacity: 0;
-  visibility: hidden;
-
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+ 
 }
 
 .product-popup.is-open {
