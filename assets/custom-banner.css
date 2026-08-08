@@ -202,7 +202,8 @@
    ============================================ */
 @media (max-width: 768px){
     .top-bar{
-        height: auto;
+        height: 60px;
+        width:100%;
         flex-direction: column;
         gap: 12px;
         padding: 20px 0;
@@ -216,7 +217,7 @@
     }
     
     .banner-image{
-        height: 300px;
+        height: 350px;
     }
     
     .banner-bottom{
