@@ -1,3 +1,5 @@
+
+/* ========== GRID ========== */
 .custom-grid {
 padding: 40px 20px;
 max-width: 3840px;
@@ -81,7 +83,7 @@ top:40%;
 left:70%;
 }
 
-/\* ========== POPUP ========== \*/
+/* ========== POPUP ========== */
 
 .product-popup {
 position: fixed;
@@ -119,7 +121,7 @@ background: #fff;
 
 }
 
-/\* Close \*/
+/* Close */
 
 .product-popup-close {
 position: relative;
@@ -143,7 +145,7 @@ color: #000;
 cursor: pointer;
 }
 
-/\* Product top area \*/
+/* Product top area */
 
 .popup-body {
 display: grid;
@@ -155,7 +157,7 @@ gap: 10px;
 margin-bottom: 14px;
 }
 
-/\* Image \*/
+/* Image */
 
 .product-popup-image-box {
 
@@ -171,7 +173,7 @@ display: block;
 
 }
 
-/\* Product information \*/
+/* Product information */
 
 .popup-title {
 margin: 18px 0 18px;
@@ -203,7 +205,7 @@ color: #333;
 margin: 0;
 }
 
-/\* Variants \*/
+/* Variants */
 
 .popup-variants {
 margin-top: 14px;
@@ -226,7 +228,7 @@ line-height: 1.2;
 text-transform: none;
 }
 
-/\* Color buttons \*/
+/* Color buttons */
 
 .color-buttons {
 display: grid;
@@ -265,7 +267,7 @@ background-color: #000;
 color\:white;
 }
 
-/\* Size / other select \*/
+/* Size / other select */
 
 .popup-variant-select {
 width: 100%;
@@ -308,7 +310,7 @@ background-size:
 background-repeat: no-repeat;
 }
 
-/\* Add to cart \*/
+/* Add to cart */
 
 .popup-add-btn {
 width: 100%;
@@ -356,7 +358,7 @@ font-weight: 200;
 line-height: 1;
 }
 
-/\* Error \*/
+/* Error */
 
 .popup-error {
 margin-top: 12px;
@@ -372,7 +374,7 @@ display: none;
 display: block;
 }
 
-/\* ========== MOBILE ========== \*/
+/* ========== MOBILE ========== */
 
 @media (max-width: 768px) {
 
@@ -381,9 +383,11 @@ width: calc(100vw - 24px);
 max-width: none;
 
 ```
+
 max-height: calc(100vh - 24px);
 
 padding: 42px 18px 24px;
+
 ```
 
 }
@@ -445,3 +449,4 @@ width: 95%;
 grid-template-columns: 1fr;
 }
 }
+
