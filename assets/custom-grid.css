@@ -478,14 +478,14 @@
   }
 
   .popup-body {
-   width:140px;
+    grid-template-columns: 1fr 1fr;
 
     gap: 10px;
   }
 
   .product-popup-image-box,
   .product-popup-img {
-    width: 100%;
+    width: 140px;
   }
 
   .product-popup-img {
