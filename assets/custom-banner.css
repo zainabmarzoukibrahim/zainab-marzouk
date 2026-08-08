@@ -1,3 +1,6 @@
+.mobile-only{
+    display:none;
+}
 .custom-banner{
     width:100%;
     background-color:#ffffff;
@@ -201,6 +204,7 @@
    Mobile Responsive
    ============================================ */
 @media (max-width: 768px){
+   
     .top-bar{
         height: 60px;
         width:100%;
