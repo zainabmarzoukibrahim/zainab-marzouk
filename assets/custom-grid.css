@@ -278,6 +278,7 @@
 
 .color-btn.is-active {
   background-color: #000;
+  color:white;
 }
 
 /* Size / other select */
