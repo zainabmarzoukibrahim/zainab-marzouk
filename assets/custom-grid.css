@@ -496,76 +496,17 @@
 }
 
 
-/* ========== SMALL MOBILE ========== */
-
-@media (max-width: 480px) {
-
-  .product-popup-content {
-    width: calc(100vw - 20px);
-
-    padding: 45px 15px 20px;
+/* ==========  MOBILE ========== */
+@media(max-width:780px){
+  .grid-container{
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
   }
-
-  .popup-top {
-    gap: 10px !important;
+  .grid-tagline{
+    font-size:24px;
+    padding:20px 0;
+    justify-content:center;
   }
-
-  .popup-image-wrapper {
-    width: 100px !important;
-    min-width: 100px !important;
-    flex-basis: 100px !important;
-  }
-
-  .popup-image-wrapper .popup-img {
-    width: 100px !important;
-    height: 120px !important;
-  }
-
-  .popup-title {
-    font-size: 16px;
-    margin-top: 3px;
-  }
-
-  .popup-price {
-    font-size: 18px;
-    margin-bottom: 12px;
-  }
-
-  .popup-description {
-    font-size: 12px;
-  }
-
-  .popup-variant-label {
-    font-size: 16px;
-  }
-
-  .color-btn {
-    font-size: 16px;
-    min-height: 50px;
-  }
-
-  .popup-variant-select {
-    height: 52px;
-    font-size: 16px;
-  }
-
-  .popup-add-btn {
-    height: 58px;
-
-    margin-top: 35px;
-
-    font-size: 17px;
-  }
-
-  .popup-arrow {
-    font-size: 28px;
-  }
-}
-
-
-/* ========== BODY ========== */
-
-body.popup-open {
-  overflow: hidden;
+  
 }
 
