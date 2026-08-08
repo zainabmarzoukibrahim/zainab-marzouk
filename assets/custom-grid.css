@@ -132,7 +132,7 @@
 /* Close */
 
 .product-popup-close {
-  position: absolute;
+  position: relative;
   top: 14px;
   left: 40px;
 
