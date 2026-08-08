@@ -1,5 +1,5 @@
 .mobile-only{
-    display:none !important;
+    display:none ;
 }
 .custom-banner{
     width:100%;
@@ -208,8 +208,8 @@
   .desktop-only { display: none !important; }
 
   /*   desktop-only */
-  .top-left , .banner-logo,
-  .top-center ,p,
+  .top-left > .banner-logo,
+  .top-center > p,
   .top-right,
   .banner-footer  {
     display: none !important;
