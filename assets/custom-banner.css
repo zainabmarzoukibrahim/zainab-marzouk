@@ -248,13 +248,25 @@ cursor:pointer;}
         text-align:center;
         padding:30px 20px 20px;
     }
+    .mobile-banner-header h1{
+        font-size:32px;
+        font-weight:700;
+        margin:0 0 12px;
+
+
+    }
+    .mobile-banner-header p{
+        font-size:16px;
+        margin:0;
+    }
     .banner-image{
        height:350px;
     }
     
     .banner-bottom{
         flex-direction: column;
-        padding: 24px;
+        padding: 0;
+        gap:0;
     }
     
     .banner-text h1{
