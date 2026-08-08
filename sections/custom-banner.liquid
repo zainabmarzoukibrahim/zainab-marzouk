@@ -1,163 +1,127 @@
-
+{% comment %}
+  Gift Guide Banner Section
+  File: sections/gift-guide-banner.liquid
+{% endcomment %}
 
 {{ 'custom-banner.css' | asset_url | stylesheet_tag }}
 
-<!-- Top Bar -->
-<div class="top-bar">
-
-  <div class="top-left">
-    <div class="banner-logo">
-      {{ section.settings.logo_text }}
+<div class="custom-banner">
+  
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="top-left">
+      <span class="banner-logo">{{ section.settings.logo_text }}</span>
+    </div>
+    <div class="top-center">
+      <p>{{ section.settings.top_text }}</p>
+    </div>
+    <div class="top-right">
+      <a href="{{ section.settings.top_button_link }}" class="btn-choose">
+        {{ section.settings.top_button_text }} →
+      </a>
     </div>
   </div>
 
-  <div class="top-center">
-    <p>{{ section.settings.top_text }}</p>
+  <!-- Banner Container -->
+  <div class="banner-container">
+    
+    <!-- Top Image -->
+    <div class="banner-image" 
+      {% if section.settings.background_image != blank %}
+        style="background-image: url('{{ section.settings.background_image | image_url: width: 1920 }}');"
+      {% endif %}
+    ></div>
+
+    <!-- Bottom Content -->
+    <div class="banner-bottom">
+      <div class="banner-text">
+        <h1>{{ section.settings.title }}</h1>
+        <p>{{ section.settings.description }}</p>
+        <a href="{{ section.settings.button_link }}" class="shop-btn">
+          {{ section.settings.button_text }} →
+        </a>
+      </div>
+      <div class="banner-side-image"
+        {% if section.settings.side_image != blank %}
+          style="background-image: url('{{ section.settings.side_image | image_url: width: 800 }}');"
+        {% endif %}
+      ></div>
+    </div>
+    
   </div>
-
-  <div class="top-right">
-    <a
-      href="{{ section.settings.top_button_link }}"
-      class="btn-choose"
-    >
-      {{ section.settings.top_button_text }} →
-    </a>
-  </div>
-
+  
+  <p class="banner-footer">{{ section.settings.footer_text }}</p>
 </div>
-
-
-<!-- Top Image -->
-<div
-  class="banner-image"
-  {% if section.settings.background_image != blank %}
-    style="background-image: url('{{ section.settings.background_image | image_url: width: 1920 }}');"
-  {% endif %}
-></div>
-
-
-<!-- Bottom Content -->
-<div class="banner-bottom">
-
-  <div class="banner-text">
-
-    <h1>
-      {{ section.settings.title }}
-    </h1>
-
-    <p>
-      {{ section.settings.description }}
-    </p>
-
-    <a
-      href="{{ section.settings.button_link }}"
-      class="shop-btn"
-    >
-      {{ section.settings.button_text }} →
-    </a>
-
-  </div>
-
-
-  <div
-    class="banner-side-image"
-    {% if section.settings.side_image != blank %}
-      style="background-image: url('{{ section.settings.side_image | image_url: width: 800 }}');"
-    {% endif %}
-  ></div>
-
-</div>
-
-
-<!-- Footer -->
-<div class="banner-footer">
-  {{ section.settings.footer_text }}
-</div>
-
 
 {% schema %}
 {
   "name": "Gift Guide Banner",
   "tag": "section",
   "class": "section",
-
   "settings": [
-
     {
       "type": "image_picker",
       "id": "background_image",
       "label": "Top Background Image"
     },
-
     {
       "type": "image_picker",
       "id": "side_image",
       "label": "Side Image (Right)"
     },
-
     {
       "type": "text",
       "id": "logo_text",
       "label": "Logo Text",
       "default": "TISSO VISON"
     },
-
     {
       "type": "text",
       "id": "top_text",
       "label": "Top Text",
       "default": "Find the ideal gift for your loved ones."
     },
-
     {
       "type": "text",
       "id": "top_button_text",
       "label": "Top Button Text",
       "default": "CHOOSE GIFT"
     },
-
     {
       "type": "url",
       "id": "top_button_link",
       "label": "Top Button Link"
     },
-
     {
       "type": "text",
       "id": "title",
       "label": "Title",
       "default": "The Gift Guide"
     },
-
     {
       "type": "textarea",
       "id": "description",
       "label": "Description",
       "default": "Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season."
     },
-
     {
       "type": "text",
       "id": "button_text",
       "label": "Button Text",
       "default": "SHOP NOW"
     },
-
     {
       "type": "url",
       "id": "button_link",
       "label": "Button Link"
     },
-
     {
       "type": "text",
       "id": "footer_text",
       "label": "Footer Text",
       "default": "SUSTAINABLE, ETHICALLY-MADE CLOTHES IN SIZES XS TO 6XL"
     }
-
   ],
-
   "presets": [
     {
       "name": "Gift Guide Banner"
