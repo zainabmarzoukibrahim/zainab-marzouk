@@ -190,15 +190,16 @@
 /* ========== IMAGE ========== */
 
 .popup-image-wrapper {
-  width: 120px ;
-  max-width: 120px ;
+  width:130px ;
+  max-width: 130px ;
   margin: 0 ;
   padding: 0 ;
+  
 }
 
 .popup-image-wrapper .popup-img {
-  width: 120px ;
-  height: 140px ;
+  width: 130px ;
+  height: 130px ;
   object-fit: cover ;
   display: block ;
 }
