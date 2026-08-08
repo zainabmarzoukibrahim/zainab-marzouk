@@ -205,13 +205,13 @@
 @media (max-width: 768px) {
 
   .mobile-only { display: block; }
-  .desktop-only { display: none !important; }
+  .desktop-only { display: none; }
 
   /*   desktop-only */
   .top-left > .banner-logo,
   .top-center > p,
   .top-right,
-  .banner-footer ,mobile-footer-bar {
+  .banner-footer  {
     display: none ;
   }
 
