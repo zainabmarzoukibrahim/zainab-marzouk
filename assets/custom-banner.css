@@ -211,7 +211,7 @@
   .top-left > .banner-logo,
   .top-center > p,
   .top-right,
-  .banner-footer {
+  .banner-footer desktop-only {
     display: none !important;
   }
 
