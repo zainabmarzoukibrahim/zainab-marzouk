@@ -204,21 +204,18 @@
 
 @media (max-width: 768px) {
 
-
   .mobile-only { display: block; }
   .desktop-only { display: none !important; }
 
-  
+  /*   desktop-only */
   .top-left > .banner-logo,
   .top-center > p,
   .top-right,
   .banner-footer {
     display: none !important;
-   
-   
   }
 
-  /* -----  Menu ----- */
+  /* ----- Hamburger Menu ----- */
   .mobile-menu-btn {
     display: flex;
     flex-direction: column;
@@ -287,11 +284,11 @@
   /* ----- Banner Image ----- */
   .banner-image {
     height: 350px;
-    position: relative; 
+    position: relative;
   }
 
-  /* ----- SHOP NOW button  ----- */
-  .mobile-banner {
+  /* ----- SHOP NOW button   ----- */
+  .mobile-banner-cta {
     position: absolute;
     bottom: 40px;
     left: 50%;
@@ -299,7 +296,7 @@
     z-index: 2;
   }
 
-  .mobile-banner .shop-btn {
+  .mobile-banner-cta .shop-btn {
     padding: 14px 40px;
     font-size: 16px;
     display: inline-flex;
