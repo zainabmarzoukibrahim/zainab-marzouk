@@ -190,8 +190,9 @@
 /* ========== IMAGE ========== */
 
 .product-popup-image-box {
-  width: 180px;
+  width: 120px;
   flex-shrink: 0;
+
 }
 
 .product-popup-img {
