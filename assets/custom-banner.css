@@ -244,7 +244,10 @@ cursor:pointer;}
         letter-spacing:2px;
     }
     
-    
+    .mobile-banner-header{
+        text-align:center;
+        padding:30px 20px 20px;
+    }
     .banner-image{
        height:350px;
     }
