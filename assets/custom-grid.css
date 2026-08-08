@@ -190,9 +190,12 @@
 /* ========== IMAGE ========== */
 
 .product-popup-image-box {
+  width: 120px;
+  min-width: 120px;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
  
-   margin-left:0;
-  
 }
 
 .product-popup-img {
