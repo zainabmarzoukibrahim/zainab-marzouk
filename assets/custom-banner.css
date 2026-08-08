@@ -204,13 +204,26 @@
    Mobile Responsive
    ============================================ */
 @media (max-width: 768px){
+     .mobile-only{display:block;}
+    .mobile-menu-btn{display:flex;
+    gap:5px;
+padding:8px;
+background:none;
+border:none;
+cursor:pointer;}
+.mobile-menu-btn span {
+    display:block;
+    width:22px;
+    height:2px;
+    background:#000;
+}
+    .banner-text,.banner-side-image,.banner-footer,.top-center p,.top-right{display:none;}
    
     .top-bar{
         height: 60px;
+        padding:0 20px;
         width:100%;
-        flex-direction: column;
-        gap: 12px;
-        padding: 20px 0;
+       position:relative;
     }
     
     .top-left,
@@ -221,7 +234,7 @@
     }
     
     .banner-image{
-        width:100%;
+        width:300%;
     }
     
     .banner-bottom{
