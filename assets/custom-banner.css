@@ -268,9 +268,19 @@ cursor:pointer;}
         padding: 0;
         gap:0;
     }
-    
+    .mobile-wrapper{
+        text-align:center;
+        padding:0 20px 30px;
+        width:100%;
+    }
+    .mobile-wrapper .shop-btn{
+        padding:18px 50px;
+        font-size:20px;
+        letter-spacing:1px;
+        text-transform:uppercase;
+    }
     .banner-text h1{
-        font-size: 12px;
+        font-size: 32px;
         
     }
     
