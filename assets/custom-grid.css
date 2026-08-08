@@ -187,7 +187,7 @@
 .popup-image-wrapper {
   width: 200px ;
   min-width: 200px ;
-  flex: 0 0 200px ;
+  flex: 0 0 500px ;
 
   margin: 0 ;
   padding: 0 ;
@@ -195,7 +195,7 @@
 
 .popup-image-wrapper .popup-img {
   width: 200px;
-  height: 1000px ;
+  height: 200px ;
 
   object-fit: cover ;
   display: block ;
