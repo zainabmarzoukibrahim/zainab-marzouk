@@ -1,26 +1,25 @@
 /* ========== GRID ========== */
+
 .custom-grid {
   padding: 40px 20px;
   max-width: 3840px;
   margin: 0 auto;
 }
 
-
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  
 }
-.grid-tagline{
-  font-size:100px;
-    display:flex;
-    justify-content: space-between;
-    padding: 40px  ;
-    max-width:3480px;
-    
 
+.grid-tagline {
+  font-size: 100px;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  max-width: 3480px;
 }
+
 .grid-item {
   position: relative;
 }
@@ -32,56 +31,68 @@
 }
 
 .grid-image {
-  width: 3840px;
+  width: 100%;
   height: 100%;
   object-fit: cover;
-
+  display: block;
 }
 
 
+/* ========== GRID POPUP BUTTON ========== */
 
 .grid-popup-btn {
   position: absolute;
   bottom: 40px;
   right: 16px;
-  width:50px;
+
+  width: 50px;
   height: 44px;
+
   border-radius: 50%;
+
   background: #f5f5f5d9;
-  color:#000;
+  color: #000;
+
   border: none;
+
   font-size: 40px;
   font-weight: 700;
+
   cursor: pointer;
+
   display: flex;
   align-items: center;
   justify-content: center;
- 
 }
-.grid-popup-btn--1{
-  
-  top:80%;
-  left:50%;
+
+.grid-popup-btn--1 {
+  top: 80%;
+  left: 50%;
 }
-.grid-popup-btn--2{
-  top:60%;
-  left:80%;
+
+.grid-popup-btn--2 {
+  top: 60%;
+  left: 80%;
 }
-.grid-popup-btn--3{
- top:30%;
- left:60%;
+
+.grid-popup-btn--3 {
+  top: 30%;
+  left: 60%;
 }
-.grid-popup-btn--4{
-  top:30%;
- left:80%;
+
+.grid-popup-btn--4 {
+  top: 30%;
+  left: 80%;
 }
-.grid-popup-btn--5{
- top:30%;
- left:50%;
+
+.grid-popup-btn--5 {
+  top: 30%;
+  left: 50%;
 }
-.grid-popup-btn--6{
-  top:40%;
- left:70%;
+
+.grid-popup-btn--6 {
+  top: 40%;
+  left: 70%;
 }
 
 
@@ -90,6 +101,7 @@
 .product-popup {
   position: fixed;
   inset: 0;
+
   z-index: 9999;
 
   display: flex;
@@ -108,16 +120,17 @@
 }
 
 
-/* Overlay */
+/* ========== OVERLAY ========== */
 
 .popup-overlay {
   position: absolute;
   inset: 0;
+
   background: rgba(0, 0, 0, 0.25);
 }
 
 
-/* White popup box */
+/* ========== WHITE POPUP BOX ========== */
 
 .product-popup-content {
   position: relative;
@@ -427,6 +440,11 @@
 
 @media (max-width: 768px) {
 
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
   .product-popup-content {
     width: calc(100vw - 24px);
     max-width: none;
@@ -468,7 +486,13 @@
 }
 
 
+/* ========== SMALL MOBILE ========== */
+
 @media (max-width: 480px) {
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
 
   .product-popup-content {
     width: calc(100vw - 20px);
@@ -520,6 +544,8 @@
   }
 }
 
+
+/* ========== BODY ========== */
 
 body.popup-open {
   overflow: hidden;
