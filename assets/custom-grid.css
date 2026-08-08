@@ -192,6 +192,7 @@
 .product-popup-image-box {
  
   flex-shrink: 0;
+   margin-left:0;
 }
 
 .product-popup-img {
