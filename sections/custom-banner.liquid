@@ -29,7 +29,7 @@
     <!-- Mobile: Title & Description  -->
 <div class="mobile-banner-header mobile-only">
   <h1>{{ section.settings.title }}</h1>
-  <p>{{ section.settings.description }}</p>
+  <p>{{ section.settings.mobile_description }}</p>
 </div>
 
 <!-- Banner Image -->
@@ -48,7 +48,7 @@
 
 <!-- Mobile: Sustainable text -->
 <div class="mobile-footer-bar mobile-only">
-  {{ section.settings.footer_text }}
+  {{ section.settings.mobile_footer_text }}
 </div>
 
 <!-- Desktop Only: Bottom Content -->
@@ -130,6 +130,12 @@
       "default": "Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season."
     },
     {
+"type": "textarea",
+"id": "mobile_description",
+"label": "mobiledescription",
+"default": "Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season."
+},
+    {
       "type": "text",
       "id": "button_text",
       "label": "Button Text",
@@ -145,7 +151,13 @@
       "id": "footer_text",
       "label": "Footer Text",
       "default": "SUSTAINABLE, ETHICALLY-MADE CLOTHES IN SIZES XS TO 6XL"
-    }
+    },
+    {
+"type": "text",
+"id": "mobile_footer_text",
+"label": "Mobile Footer Text",
+"default": "SUSTAINABLE, ETHICALLY MADE ACTIVEWEAR"
+}
   ],
   "presets": [
     {
