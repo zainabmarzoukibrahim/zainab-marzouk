@@ -190,17 +190,15 @@
 /* ========== IMAGE ========== */
 
 .product-popup-image-box {
-  width: 120px;
-  height:140px;
+ 
   flex-shrink: 0;
-
 }
 
 .product-popup-img {
   display: block;
 
-  width: 180px;
-  height: 210px;
+  width: 120px;
+  height: 140px;
 
   object-fit: cover;
 }
