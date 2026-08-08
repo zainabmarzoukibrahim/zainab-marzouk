@@ -91,12 +91,11 @@
   position: fixed;
   inset: 0;
   z-index: 9999;
-  width:500px;
-  
-
   display: flex;
   align-items: center;
   justify-content: center;
+  width:90vw;
+  max-width:1200px;
 
   opacity: 0;
   visibility: hidden;
@@ -121,8 +120,7 @@
   z-index: 2;
 
   width: 380px;
-  max-width: 3000px;
-  max-height: 3000px;
+ min-height:700px;
 
   background: #fff;
 
