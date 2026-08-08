@@ -177,7 +177,8 @@
 .popup-body {
   display: grid;
 
-   grid-template-columns: 140px 1fr;
+  grid-template-columns: 180px 1fr;
+
   column-gap: 12px;
 
   align-items: start;
@@ -197,7 +198,7 @@
   display: block;
 
   width: 120px;
-  height: 140px;
+  height: 120px;
 
   object-fit: cover;
 }
@@ -252,7 +253,6 @@
 
   position: relative;
   z-index: 10;
-  grid-column: 1 / -1;
 }
 
 .popup-variant-group {
