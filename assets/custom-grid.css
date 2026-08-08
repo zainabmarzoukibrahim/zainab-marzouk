@@ -108,16 +108,19 @@
 }
 
 
-/* Overlay */
+/* ========== OVERLAY ========== */
 
 .popup-overlay {
   position: absolute;
   inset: 0;
+
   background: rgba(0, 0, 0, 0.25);
+
+  z-index: 1;
 }
 
 
-/* White popup box */
+/* ========== WHITE POPUP BOX ========== */
 
 .product-popup-content {
   position: relative;
@@ -245,10 +248,16 @@
 .popup-variants {
   margin-top: 17px;
   margin-bottom: 0;
+
+  position: relative;
+  z-index: 10;
 }
 
 .popup-variant-group {
   margin-top: 17px;
+
+  position: relative;
+  z-index: 10;
 }
 
 .popup-variant-label {
@@ -265,22 +274,38 @@
 }
 
 
-/* ====== COLOR BUTTONS ====== */
+/* ========== COLOR BUTTONS ========== */
 
 .color-buttons {
   display: flex;
   margin-bottom: 16px;
+
+  position: relative;
+  z-index: 20;
+
+  pointer-events: auto;
 }
 
 .color-btn {
   flex: 1;
+
   padding: 14px;
+
   background: #fff;
   color: #000;
+
   border: 1px solid #ccc;
+
   font-size: 14px;
+
   cursor: pointer;
+
   transition: all 0.2s;
+
+  position: relative;
+  z-index: 20;
+
+  pointer-events: auto;
 }
 
 .color-btn.is-active {
@@ -297,20 +322,26 @@
   background: #333;
 }
 
-.size-select {
-  width: 100%;
-  padding: 14px;
-  border: 1px solid #ccc;
-  font-size: 14px;
-  background: #fff;
-  margin-bottom: 16px;
-}
-
 
 /* ========== SIZE SELECT ========== */
 
+.size-select {
+  width: 100%;
+
+  padding: 14px;
+
+  border: 1px solid #ccc;
+
+  font-size: 14px;
+
+  background: #fff;
+
+  margin-bottom: 16px;
+}
+
 .popup-variant-select {
   width: 100%;
+
   height: 62px;
 
   padding: 0 55px 0 20px;
@@ -330,6 +361,11 @@
   cursor: pointer;
 
   appearance: none;
+
+  position: relative;
+  z-index: 20;
+
+  pointer-events: auto;
 
   background-image:
     linear-gradient(
@@ -359,6 +395,7 @@
 
 .popup-add-btn {
   width: 100%;
+
   height: 68px;
 
   margin-top: 74px;
@@ -371,6 +408,7 @@
   color: #fff;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
@@ -399,7 +437,9 @@
 
 .popup-arrow {
   font-size: 34px;
+
   font-weight: 200;
+
   line-height: 1;
 }
 
@@ -427,6 +467,7 @@
 
   .product-popup-content {
     width: calc(100vw - 24px);
+
     max-width: none;
 
     max-height: calc(100vh - 24px);
@@ -436,6 +477,7 @@
 
   .popup-body {
     grid-template-columns: 1fr 1fr;
+
     gap: 10px;
   }
 
@@ -476,16 +518,19 @@
 
   .popup-body {
     grid-template-columns: 1fr 1fr;
+
     gap: 10px;
   }
 
   .popup-title {
     font-size: 16px;
+
     margin-top: 3px;
   }
 
   .popup-price {
     font-size: 18px;
+
     margin-bottom: 12px;
   }
 
@@ -499,17 +544,21 @@
 
   .color-btn {
     font-size: 16px;
+
     min-height: 50px;
   }
 
   .popup-variant-select {
     height: 52px;
+
     font-size: 16px;
   }
 
   .popup-add-btn {
     height: 58px;
+
     margin-top: 35px;
+
     font-size: 17px;
   }
 
@@ -518,6 +567,8 @@
   }
 }
 
+
+/* ========== BODY ========== */
 
 body.popup-open {
   overflow: hidden;
