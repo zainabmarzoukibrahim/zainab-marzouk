@@ -155,7 +155,7 @@
 
 .popup-body {
   display: grid;
-width:100px;
+
   grid-template-columns: 1fr 1.15fr;
 
   gap: 10px;
@@ -166,7 +166,9 @@ width:100px;
 /* Image */
 
 .popup-image-box {
-  width: 100%;
+
+  width: 344px;
+  height:100px;
 
   aspect-ratio: 0.78;
 
