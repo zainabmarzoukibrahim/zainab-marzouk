@@ -249,7 +249,7 @@
 .popup-variants {
   margin-top: 17px;
   margin-bottom: 0;
-
+  
 
   position: relative;
   z-index: 10;
@@ -284,7 +284,6 @@
 
   position: relative;
   z-index: 20;
-  width:271px;
 
   pointer-events: auto;
 }
