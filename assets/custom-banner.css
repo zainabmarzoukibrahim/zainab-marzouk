@@ -205,7 +205,7 @@
 @media (max-width: 768px) {
 
   .mobile-only { display: block; }
-  .desktop-only { display: none; }
+  .desktop-only { display: none !important; }
 
   /*   desktop-only */
   .top-left > .banner-logo,
