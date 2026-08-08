@@ -177,7 +177,7 @@
 .popup-body {
   display: grid;
 
-  grid-template-columns: 180px 1fr;
+  grid-template-columns: 120px 1fr;
 
   column-gap: 12px;
 
@@ -189,10 +189,7 @@
 
 /* ========== IMAGE ========== */
 
-.product-popup-image-box {
- 
-  flex-shrink: 0;
-}
+.product-popup-image-box ,
 
 .product-popup-img {
   display: block;
@@ -201,6 +198,9 @@
   height: 140px;
 
   object-fit: cover;
+}
+.product-popup-img {
+  height: auto;
 }
 
 
