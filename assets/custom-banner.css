@@ -214,6 +214,7 @@
   .top-right,
   .banner-footer {
     display: none !important;
+    background-color:#f5f5f5d9;
    
   }
 
