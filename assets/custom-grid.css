@@ -194,10 +194,10 @@
   flex-shrink: 0;
 }
 
-.product-popup-img {
+.popup-img {
   display: block;
 
-  width: 120px;
+  width: 15px;
   height: 120px;
 
   object-fit: cover;
