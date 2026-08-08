@@ -26,7 +26,7 @@
   <!-- Banner Container -->
   <div class="banner-container">
     
-    <!-- Mobile: Title & Description (قبل الصورة) -->
+    <!-- Mobile: Title & Description  -->
 <div class="mobile-banner-header mobile-only">
   <h1>{{ section.settings.title }}</h1>
   <p>{{ section.settings.description }}</p>
@@ -38,7 +38,7 @@
     style="background-image: url('{{ section.settings.background_image | image_url: width: 1920 }}');"
   {% endif %}
 >
-  <!-- Mobile: SHOP NOW button على الصورة -->
+  <!-- Mobile: SHOP NOW button  -->
   <div class="mobile-banner-cta mobile-only">
     <a href="{{ section.settings.button_link }}" class="shop-btn">
       {{ section.settings.button_text }} →
