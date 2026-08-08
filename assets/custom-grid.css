@@ -1,3 +1,4 @@
+
 /* ========== GRID ========== */
 
 .custom-grid {
@@ -120,7 +121,7 @@
 }
 
 
-/* ========== WHITE POPUP BOX ========== */
+/* ========== POPUP BOX ========== */
 
 .product-popup-content {
   position: relative;
@@ -147,7 +148,7 @@
 
 .product-popup-close {
   position: relative;
-   z-index: 2;
+  z-index: 2;
 
   top: 20px;
   right: 22px;
@@ -167,45 +168,46 @@
   color: #000;
 
   cursor: pointer;
-
- 
 }
 
 
-/* ========== PRODUCT TOP AREA ========== */
+/* ========== PRODUCT TOP ========== */
 
-.popup-body {
-  display: grid;
 
-  grid-template-columns: 180px 1fr;
-
-  column-gap: 12px;
-
-  align-items: start;
-
-  margin: 0;
+.popup-top {
+  display: flex ;
+  align-items: flex-start ;
+  gap: 20px ;
+  width: 100% ;
 }
 
 
-/* ========== IMAGE ========== */
+/* ========== PRODUCT IMAGE ========== */
 
 .popup-image-wrapper {
-  width:130px ;
-  max-width: 130px ;
+  width: 200px ;
+  min-width: 200px ;
+  flex: 0 0 200px ;
+
   margin: 0 ;
   padding: 0 ;
-  
 }
 
 .popup-image-wrapper .popup-img {
-  width: 130px ;
-  height: 130px ;
+  width: 200px;
+  height: 200px ;
+
   object-fit: cover ;
   display: block ;
 }
 
 
 /* ========== PRODUCT INFORMATION ========== */
+
+.popup-info {
+  flex: 1 !important;
+  min-width: 0 !important;
+}
 
 .popup-title {
   margin: 5px 0 18px;
@@ -229,7 +231,7 @@
   color: #111;
 }
 
-.popup-desc {
+.popup-description {
   margin: 0;
 
   font-size: 16px;
@@ -240,7 +242,7 @@
   color: #333;
 }
 
-.popup-desc p {
+.popup-description p {
   margin: 0;
 }
 
@@ -250,7 +252,6 @@
 .popup-variants {
   margin-top: 17px;
   margin-bottom: 0;
-  
 
   position: relative;
   z-index: 10;
@@ -327,20 +328,6 @@
 
 
 /* ========== SIZE SELECT ========== */
-
-.size-select {
-  width: 100%;
-
-  padding: 14px;
-
-  border: 1px solid #ccc;
-
-  font-size: 14px;
-
-  background: #fff;
-
-  margin-bottom: 16px;
-}
 
 .popup-variant-select {
   width: 100%;
@@ -470,7 +457,6 @@
 
   .product-popup-content {
     width: calc(100vw - 24px);
-
     max-width: none;
 
     max-height: calc(100vh - 24px);
@@ -478,19 +464,19 @@
     padding: 45px 18px 25px;
   }
 
-  .popup-body {
-    grid-template-columns: 1fr 1fr;
-
-    gap: 10px;
+  .popup-top {
+    gap: 10px !important;
   }
 
-  .product-popup-image-box,
-  .product-popup-img {
-    width: 100%;
+  .popup-image-wrapper {
+    width: 120px !important;
+    min-width: 120px !important;
+    flex-basis: 120px !important;
   }
 
-  .product-popup-img {
-    height: auto;
+  .popup-image-wrapper .popup-img {
+    width: 120px !important;
+    height: 140px !important;
   }
 
   .popup-title {
@@ -501,7 +487,7 @@
     font-size: 20px;
   }
 
-  .popup-desc {
+  .popup-description {
     font-size: 14px;
   }
 
@@ -511,6 +497,8 @@
 }
 
 
+/* ========== SMALL MOBILE ========== */
+
 @media (max-width: 480px) {
 
   .product-popup-content {
@@ -519,25 +507,32 @@
     padding: 45px 15px 20px;
   }
 
-  .popup-body {
-    grid-template-columns: 1fr 1fr;
+  .popup-top {
+    gap: 10px !important;
+  }
 
-    gap: 10px;
+  .popup-image-wrapper {
+    width: 100px !important;
+    min-width: 100px !important;
+    flex-basis: 100px !important;
+  }
+
+  .popup-image-wrapper .popup-img {
+    width: 100px !important;
+    height: 120px !important;
   }
 
   .popup-title {
     font-size: 16px;
-
     margin-top: 3px;
   }
 
   .popup-price {
     font-size: 18px;
-
     margin-bottom: 12px;
   }
 
-  .popup-desc {
+  .popup-description {
     font-size: 12px;
   }
 
@@ -547,13 +542,11 @@
 
   .color-btn {
     font-size: 16px;
-
     min-height: 50px;
   }
 
   .popup-variant-select {
     height: 52px;
-
     font-size: 16px;
   }
 
@@ -577,29 +570,3 @@ body.popup-open {
   overflow: hidden;
 }
 
-.popup-top {
-  display: flex !important;
-  align-items: flex-start !important;
-  gap: 20px !important;
-  width: 100% !important;
-}
-
-.popup-image-wrapper {
-  width: 120px !important;
-  min-width: 120px !important;
-  flex: 0 0 120px !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-.popup-image-wrapper .popup-img {
-  width: 120px !important;
-  height: 140px !important;
-  object-fit: cover !important;
-  display: block !important;
-}
-
-.popup-info {
-  flex: 1 !important;
-  min-width: 0 !important;
-}
