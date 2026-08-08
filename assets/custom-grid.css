@@ -191,6 +191,7 @@
 
 .product-popup-image-box {
   width: 120px;
+  height:140px;
   flex-shrink: 0;
 
 }
