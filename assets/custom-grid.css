@@ -264,48 +264,47 @@ left:70%;
 }
 
 
-/* ========== COLOR BUTTONS ========== */
-
+/* ======color-buttons ====== */
 .color-buttons {
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  width: 100%;
-
-  border: 1px solid #777;
-
-  box-sizing: border-box;
+  display: flex;
+  margin-bottom: 16px;
 }
 
 .color-btn {
-  min-height: 60px;
-
-  padding: 0 20px;
-
-  border: 0;
-  border-right: 1px solid #777;
-
+  flex: 1;
+  padding: 14px;
   background: #fff;
-
-  color: #111;
-
-  font-size: 20px;
-  font-weight: 400;
-
-  text-align: left;
-
+  color: #000;
+  border: 1px solid #ccc;
+  font-size: 14px;
   cursor: pointer;
-}
-
-.color-btn:last-child {
-  border-right: 0;
+  transition: all 0.2s;
 }
 
 .color-btn.is-active {
   background: #000;
   color: #fff;
+  border-color: #000;
 }
+
+.color-btn:hover {
+  background: #f0f0f0;
+}
+
+.color-btn.is-active:hover {
+  background: #333;
+}
+
+
+.size-select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  background: #fff;
+  margin-bottom: 16px;
+}
+
 
 
 /* ========== SIZE SELECT ========== */
