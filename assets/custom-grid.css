@@ -127,8 +127,7 @@
   position: relative;
   z-index: 2;
 
-  width: 800px;
-  height:800px;
+  width: 466px;
   max-width: calc(100vw - 30px);
 
   max-height: calc(100vh - 20px);
