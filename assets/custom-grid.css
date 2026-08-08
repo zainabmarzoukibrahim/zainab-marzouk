@@ -478,7 +478,7 @@
   }
 
   .popup-body {
-    grid-template-columns: 1fr 1fr;
+   width:140px;
 
     gap: 10px;
   }
