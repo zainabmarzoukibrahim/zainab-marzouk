@@ -118,9 +118,9 @@
   position: relative;
   z-index: 2;
 
-  width: 500px;
-  max-width: calc(100vw - 40px);
-  max-height: calc(100vh - 40px);
+  width: 380px;
+  max-width: 3000px;
+  max-height: 3000px;
 
   background: #fff;
 
