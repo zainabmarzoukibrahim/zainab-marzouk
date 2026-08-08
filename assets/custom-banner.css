@@ -204,16 +204,17 @@
 
 @media (max-width: 768px) {
 
-  /* إظهار الموبايل - إخفاء الديسكتوب */
+
   .mobile-only { display: block; }
   .desktop-only { display: none !important; }
 
-  /* إخفاء العناصر الديسكتوب اللي مالهاش desktop-only */
+  
   .top-left > .banner-logo,
   .top-center > p,
   .top-right,
   .banner-footer {
     display: none !important;
+    background-color:#f5f5f5;
   }
 
   /* ----- Hamburger Menu ----- */
@@ -285,10 +286,10 @@
   /* ----- Banner Image ----- */
   .banner-image {
     height: 350px;
-    position: relative; /* عشان الزرار يتحط عليها */
+    position: relative; 
   }
 
-  /* ----- SHOP NOW button على الصورة ----- */
+  /* ----- SHOP NOW button  ----- */
   .mobile-banner-cta {
     position: absolute;
     bottom: 40px;
