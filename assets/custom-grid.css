@@ -190,16 +190,16 @@
 /* ========== IMAGE ========== */
 
 .popup-image-wrapper {
-  width:200pxpx ;
-  max-width: 200px ;
+  width:130px ;
+  max-width: 130px ;
   margin: 0 ;
   padding: 0 ;
   
 }
 
 .popup-image-wrapper .popup-img {
-  width: 200px ;
-  height: 200px ;
+  width: 130px ;
+  height: 130px ;
   object-fit: cover ;
   display: block ;
 }
@@ -577,3 +577,29 @@ body.popup-open {
   overflow: hidden;
 }
 
+.popup-top {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 20px !important;
+  width: 100% !important;
+}
+
+.popup-image-wrapper {
+  width: 120px !important;
+  min-width: 120px !important;
+  flex: 0 0 120px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.popup-image-wrapper .popup-img {
+  width: 120px !important;
+  height: 140px !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+.popup-info {
+  flex: 1 !important;
+  min-width: 0 !important;
+}
