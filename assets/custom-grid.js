@@ -66,24 +66,28 @@
   }
 
   function getSelectedVariant() {
-    if (!currentProduct) return null;
-    if (currentProduct.variants.length === 1) return currentProduct.variants[0];
+  if (!currentProduct) return null;
+  if (currentProduct.variants.length === 1) return currentProduct.variants[0];
 
-    const selected = [];
-    const variantsBox = document.getElementById('popupVariants');
+  const variantsBox = document.getElementById('popupVariants');
+  if (!variantsBox) return null;
 
-    if (!variantsBox) return null;
+  const selected = [];
 
-    const activeColor = variantsBox.querySelector('.color-btn.is-active');
-    if (activeColor) selected.push(activeColor.dataset.value);
+  currentProduct.options.forEach(option => {
+    if (option.name.toLowerCase() === 'color') {
+      const activeColor = variantsBox.querySelector('.color-btn.is-active');
+      selected.push(activeColor ? activeColor.dataset.value : '');
+    } else {
+      const select = variantsBox.querySelector('.popup-variant-select');
+      selected.push(select ? select.value : '');
+    }
+  });
 
-    const sizeSelect = variantsBox.querySelector('.popup-variant-select');
-    if (sizeSelect) selected.push(sizeSelect.value);
-
-    return currentProduct.variants.find(v => {
-      return v.options.every((opt, i) => opt === selected[i]);
-    });
-  }
+  return currentProduct.variants.find(v => {
+    return v.options.every((opt, i) => opt === selected[i]);
+  });
+}
 
   function shouldAutoAdd(variant) {
     if (!variant || !variant.options) return false;
