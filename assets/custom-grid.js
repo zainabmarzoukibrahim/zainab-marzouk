@@ -15,7 +15,7 @@
     if (document.querySelector('.product-popup')) return;
 
     const popupClose = document.querySelector('.popup-close');
-    const popupContent = document.querySelector('.popup-content');
+    const popupContent = document.querySelector('.product-popup-content');
 
     if (!popupContent) {
       console.error('Popup content not found!');
@@ -313,7 +313,7 @@
   function init() {
     preparePopup();
 
-    // (+) على الصور
+   
     document.querySelectorAll('.grid-popup-btn').forEach(btn => {
       btn.addEventListener('click', function(e) {
         e.preventDefault();
