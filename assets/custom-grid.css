@@ -507,6 +507,9 @@
     padding:20px 0;
     justify-content:center;
   }
-  
+  .grid-popup-btn{
+    width:22px;
+    height:22px;
+  }
 }
 
