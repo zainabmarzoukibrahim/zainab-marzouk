@@ -147,7 +147,7 @@
 /* ========== CLOSE BUTTON ========== */
 
 .popup-close {
-  position: relative;
+  position: absolute;
   z-index: 3;
 
   
