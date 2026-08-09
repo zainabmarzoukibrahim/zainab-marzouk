@@ -491,5 +491,11 @@
     height: 22px;
     font-size: 15px;
   }
+  ..popup-variant-group {
+  margin-top: 17px;
+
+  position: relative;
+  z-index: 10;
+}
 
 }
