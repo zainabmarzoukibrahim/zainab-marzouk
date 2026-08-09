@@ -127,10 +127,11 @@
   position: relative;
   z-index: 2;
 
-  width: 1000px;
-  
- height: 1000;
-  
+ width: 900px;
+  height: 700px;
+  max-width: calc(100vw - 30px);
+  max-height: calc(100vh - 20px);
+
 
 
 
