@@ -188,22 +188,25 @@
 /* ========== PRODUCT IMAGE ========== */
 
 .popup-image-wrapper {
-  width: 300px ;
-  min-width: 300px ;
-  flex: 0 0 300px ;
-
-  margin: 0 ;
-  padding: 0 ;
+  width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+    gap: 20px;
+    box-sizing:border-box;
 }
 
 .popup-image-wrapper .popup-img {
-  width: 300px;
-  height: 400px ;
- 
-
-  object-fit: cover ;
-  display: block ;
-}
+  width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+    gap: 20px;
+    box-sizing:border-box;}
 
 
 /* ========== PRODUCT INFORMATION ========== */
