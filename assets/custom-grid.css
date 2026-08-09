@@ -493,7 +493,7 @@
   }
   ..popup-variant-group {
   margin-top: 17px;
-width:12px;
+width:5px !important;
   position: relative;
   z-index: 10;
 }
