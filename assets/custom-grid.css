@@ -189,7 +189,7 @@
 
 .popup-image-wrapper {
   width:450px;;
-    height: 800px;
+    height: 600px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -202,10 +202,7 @@
   width: 100%;
     height: 100%;
   
-    align-items: center;
-    justify-content: space-between;
-   
-    gap: 20px;
+    
     box-sizing:border-box;}
 
 
