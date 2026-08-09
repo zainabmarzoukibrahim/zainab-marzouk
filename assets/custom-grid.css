@@ -127,11 +127,12 @@
   position: relative;
   z-index: 2;
 
-  width: 466px;
+  width: 600px;
   max-width: calc(100vw - 30px);
 
   max-height: calc(100vh - 20px);
-
+min-height:500px;                               /**/
+display:flex;                /**/
   overflow-y: auto;
 
   box-sizing: border-box;
@@ -175,7 +176,7 @@
 
 .popup-top {
   display: flex ;
-  align-items: flex-start ;
+  align-items: stretch ;/*flex-start*/
   gap: 20px ;
   width: 100% ;
 }
