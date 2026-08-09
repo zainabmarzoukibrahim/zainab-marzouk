@@ -127,10 +127,10 @@
   position: relative;
   z-index: 2;
 
-  width: 1200px;
-  
+  width: 800px;
+  max-width: calc(100vw - 30px);
 
- height:1000px;
+  max-height:400;
 
 
 
@@ -187,17 +187,17 @@
 /* ========== PRODUCT IMAGE ========== */
 
 .popup-image-wrapper {
-  width: 300px ;
-  min-width: 300px ;
-  flex: 0 0 300px ;
+  width: 200px ;
+  min-width: 200px ;
+  flex: 0 0 200px ;
 
   margin: 0 ;
   padding: 0 ;
 }
 
 .popup-image-wrapper .popup-img {
-  width: 300px;
-  height: 800px ;
+  width: 200px;
+  height: 200px ;
  
 
   object-fit: cover ;
