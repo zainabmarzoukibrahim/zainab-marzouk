@@ -202,7 +202,7 @@
 
           wrapper.appendChild(btnsWrap);
         } else {
-          const select = document.createElement('costum');
+          const select = document.createElement('select');
           select.className = 'popup-variant-select';
 
           option.values.forEach(val => {
