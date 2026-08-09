@@ -188,8 +188,8 @@
 /* ========== PRODUCT IMAGE ========== */
 
 .popup-image-wrapper {
-  width:500px;;
-    height: auto;
+  width:450px;;
+    height: 600;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -199,8 +199,8 @@
 }
 
 .popup-image-wrapper .popup-img {
-  width: 500px;
-    height: auto;
+  width: 450px;
+    height: 600;
     display: flex;
     align-items: center;
     justify-content: space-between;
