@@ -188,21 +188,23 @@
 /* ========== PRODUCT IMAGE ========== */
 
 .popup-image-wrapper {
-  width:450px;;
-    height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-   
-    gap: 20px;
-    box-sizing:border-box;
+  width: 300px ;
+  min-width: 300px ;
+  flex: 0 0 300px ;
+
+  margin: 0 ;
+  padding: 0 ;
 }
 
 .popup-image-wrapper .popup-img {
- width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  display: block;}
+  width: 300px;
+  height: 400px ;
+ 
+
+  object-fit: cover ;
+  display: block ;
+}
+
 
 /* ========== PRODUCT INFORMATION ========== */
 
