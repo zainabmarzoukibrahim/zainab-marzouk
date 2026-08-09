@@ -175,7 +175,7 @@
 
 .popup-top {
   display: flex ;
-  align-items: flex-start ;
+  align-items: stretch ;
   gap: 20px ;
   width: 100% ;
 }
@@ -190,11 +190,12 @@
 
   margin: 0 ;
   padding: 0 ;
+  align-self:stretch;
 }
 
 .popup-image-wrapper .popup-img {
   width: 200px;
-  height: 200px ;
+  height: 100%px ;
 
   object-fit: cover ;
   display: block ;
