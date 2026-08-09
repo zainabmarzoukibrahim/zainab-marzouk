@@ -188,7 +188,7 @@
 /* ========== PRODUCT IMAGE ========== */
 
 .popup-image-wrapper {
-  width: 100%;
+  width: 200px;;
     height: auto;
     display: flex;
     align-items: center;
@@ -199,7 +199,7 @@
 }
 
 .popup-image-wrapper .popup-img {
-  width: 100%;
+  width: 200px;
     height: auto;
     display: flex;
     align-items: center;
