@@ -133,6 +133,7 @@
   max-height: calc(100vh - 20px);
 min-height:500px;                               /**/
 display:flex;                /**/
+flex-direction:column;
   overflow-y: auto;
 
   box-sizing: border-box;
