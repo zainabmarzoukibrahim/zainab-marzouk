@@ -129,7 +129,7 @@
 
   width: 800px;
   max-width: calc(100vw - 30px);
-
+ height: auto;
   max-height:400;
 
 
@@ -140,7 +140,7 @@
 
   background: #fff;
 
-  padding: 54px 29px 36px;
+  padding: 54px 29px 15px;
 
   display: block;
 }
