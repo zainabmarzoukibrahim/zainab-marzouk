@@ -199,12 +199,10 @@
 }
 
 .popup-image-wrapper .popup-img {
-  width: 100%;
-    height: 100%;
-  
-    
-    box-sizing:border-box;}
-
+ width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block;}
 
 /* ========== PRODUCT INFORMATION ========== */
 
