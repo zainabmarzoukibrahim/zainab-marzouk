@@ -131,9 +131,9 @@
   max-width: calc(100vw - 30px);
 
   max-height: calc(100vh - 20px);
-min-height:500px;                               /**/
-display:flex;                /**/
-flex-direction:column;
+
+
+
   overflow-y: auto;
 
   box-sizing: border-box;
@@ -177,7 +177,7 @@ flex-direction:column;
 
 .popup-top {
   display: flex ;
-  align-items: stretch ;/*flex-start*/ flex:1;
+
   gap: 20px ;
   width: 100% ;
 
