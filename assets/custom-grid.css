@@ -176,9 +176,10 @@ display:flex;                /**/
 
 .popup-top {
   display: flex ;
-  align-items: stretch ;/*flex-start*/
+  align-items: stretch ;/*flex-start*/ flex:1;
   gap: 20px ;
   width: 100% ;
+
 }
 
 
