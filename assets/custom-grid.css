@@ -184,7 +184,7 @@
 /* ========== PRODUCT IMAGE ========== */
 
 .popup-image-wrapper {
-  width: 200px ;
+  width: 100% ;
   min-width: 200px ;
   flex: 0 0 200px ;
 
