@@ -187,17 +187,18 @@
 /* ========== PRODUCT IMAGE ========== */
 
 .popup-image-wrapper {
-  width: 400px ;
-  min-width: 400px ;
-  flex: 0 0 400px ;
+  width: 200px ;
+  min-width: 200px ;
+  flex: 0 0 200px ;
 
   margin: 0 ;
   padding: 0 ;
 }
 
 .popup-image-wrapper .popup-img {
-  width: 400px;
-  height: 400px ;
+  width: 200px;
+  height: 200px ;
+  flex:1;
 
   object-fit: cover ;
   display: block ;
